@@ -158,9 +158,6 @@
       "id": 25
     },
     {
-      "id": 26
-    },
-    {
       "title": "Test book",
       "author": "Me",
       "genres": [
@@ -240,6 +237,15 @@
       ],
       "rating": 9.5,
       "id": 35
+    },
+    {
+      "title": "Test book async UPDATED",
+      "author": "Me",
+      "genres": [
+        "HTML"
+      ],
+      "rating": 8,
+      "id": 36
     }
   ]
 }

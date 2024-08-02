@@ -1,7 +1,7 @@
 const BASE_URL = 'http://localhost:4040';
 
 const newBook = {
-  title: 'Test book 3',
+  title: 'Test book async',
   author: 'Me',
   genres: ['HTML'],
   rating: 9.5,
