@@ -1,5 +1,12 @@
 const BASE_URL = 'http://localhost:4040';
 
+const newBook = {
+  title: 'Test book 3',
+  author: 'Me',
+  genres: ['HTML'],
+  rating: 9.5,
+};
+
 function addBook(book) {
   const options = {
     method: 'POST',
@@ -9,26 +16,14 @@ function addBook(book) {
     body: JSON.stringify(book),
   };
 
-  return fetch(`${BASE_URL}/books`, options).then(res => res.json());
+  return fetch(`${BASE_URL}/books`, options)
+    .then(r => r.json());
 }
 
-// addBook({
-//   title: 'Тестовая книга по CSS',
-//   author: 'Я',
-//   genres: ['CSS'],
-//   rating: 9,
-// })
-//   .then(renderBook)
-//   .catch(error => console.log(error));
-
-// addBook({
-//   title: 'Тестовая книга по HTML',
-//   author: 'Я',
-//   genres: ['HTML'],
-//   rating: 7,
-// }).then(renderBook);
+addBook(newBook).then(renderBook);
 
 function renderBook(book) {
   console.log('Пришел ответ от бекенда можно рисовать');
   console.log(book);
 }
+
